@@ -1,0 +1,19 @@
+<%- include('partials/head') %>
+<div class="container d-flex flex-column align-items-center my-2 p-3">  
+  <div class="shadow-lg p-3 mb-5 bg-white rounded">
+    <h1>TODO LIST</h1>
+    <ul>
+      <% for(let task of tasks) {%>
+        <li>
+          <%= task.task %>
+          <a href="/todos/show/<%= task.id %>">details</a>
+        </li>
+        <% } %>
+      </ul>
+      <form action="/todos/new">
+        <button class="btn btn-primary">Add task</button>
+      </form>  
+    </div>
+</div>
+<%- include('partials/footer') %>
+

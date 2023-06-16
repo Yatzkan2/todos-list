@@ -1,0 +1,16 @@
+<%- include('partials/head') %>
+<div class="container d-flex flex-column align-items-center my-2 p-3">
+    <div class="shadow-lg p-3 mb-5 bg-white rounded">
+        <h1>Edit</h1>       
+        <form action="/todos/<%= id %>?_method=PATCH" method="POST">
+            <textarea name="task" id=<%= id %> cols="30" rows="10">
+                <%= task %>
+            </textarea>            
+            <div class="d-flex justify-content-between w-100">
+                <a href="/todos" class="btn btn-secondary ml-2">Main list</a>
+                <button class="btn btn-primary ml-2">Save changes</button>
+            </div>
+        </form>
+    </div>
+</div>
+    <%- include('partials/footer') %>
